@@ -25,3 +25,20 @@ app.post("/api/cars", (request, responce) => {
     console.log(brand);
     responce.send("car request submited succesfully....!");
 })
+
+
+
+// ====================== Connecting To The MongoDB ===========================
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/revision-class-01", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => {
+    console.log("Connection successful");
+})
+.catch((error) => {
+    console.log(error);
+});
+
+
