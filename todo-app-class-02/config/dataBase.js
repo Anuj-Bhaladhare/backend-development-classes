@@ -4,9 +4,9 @@ require("dotenv").config();
 
 
 const mongoConnect = () => {
-    mongoose.connect(process.env.LOCAL_URL, {
+    mongoose.connect(process.env.DATABASE_URL, {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
     })
     .then( () => {
         console.log("Bhayya DB ka connection succesfull Ho gaya...!");

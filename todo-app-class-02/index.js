@@ -24,7 +24,7 @@ app.use("api/v1", todoRoutes);
 
 // start your server
 app.listen( PORT, () => {
-    console.log("server Started SuccessFully.....!");
+    console.log(`server Started SuccessFully at ${PORT}.....!`);
 })
 
 
